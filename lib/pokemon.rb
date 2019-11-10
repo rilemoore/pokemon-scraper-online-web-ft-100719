@@ -13,11 +13,7 @@ class Pokemon
   
   def self.find(id, db)
     sql = "SELECT * FROM pokemon WHERE id=?"
-<<<<<<< HEAD
     poke_info = db.execute(sql, id).flatten
-=======
-    poke_info = db.execute(sql, id)
->>>>>>> 85dcd870b39a0e792be2e3dd4847b141f03233ae
     new_pokemon = self.new(poke_info)
     new_pokemon.id = poke_info[0]
     new_pokemon.name = poke_info[1]
